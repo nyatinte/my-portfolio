@@ -1,3 +1,22 @@
+ # My Portfolio
+ ## リポジトリの説明、概要
+ React, Chakra UIベースで書いたReact Appです。　<br>ポートフォリオサイトを作成しました。
+ 
+ ## 目的
+* 自己紹介
+* インターン、就活で使える成果物を作成する
+* React, ChakraUIなどを利用したのWeb開発の練習
+ 
+## 構成
+簡単なディレクトリの説明です<br>
+`public`<br>
+->  HTML要素が主に入ります。　それに付随する画像などもここにあります
+<br>
+
+`src`
+-> `App.js`などファイルはここにあります。コンポーネントは`/components`, ページは`/pages`, 画像は`images`フォルダにそれぞれ入っています
+
+## 以下はReact Appの説明です。
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
