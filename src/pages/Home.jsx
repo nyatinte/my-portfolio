@@ -38,7 +38,7 @@ const Home = () => {
                 <Box>
                     <Heading fontSize={['xl', '2xl']} px='4' my='2' borderLeft='3px solid red'>製作期間</Heading>
                     <Text>2022/06/10~</Text>
-                    <Text>20時間くらいはやっているかな？</Text>
+                    <Text>約20時間ほど取り組んだ</Text>
                 </Box>
             </VStack>
         </AnimatedDiv>
