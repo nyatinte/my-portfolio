@@ -10,7 +10,9 @@ import AnimatedDiv from '../components/AnimatedDiv'
 import NotFoundImage from '../images/404.PNG';
 
 const ErrorPage = () => {
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
+    // 再代入は必要ない場合は const を使うようにする
+    const navigate = useNavigate();
     return (
         <AnimatedDiv>
             <ArticleTitle title='ページが見つかりません！' subtitle='oh my god!' />
