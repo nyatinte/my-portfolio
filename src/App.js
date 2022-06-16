@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {
   ChakraProvider,
   Container,
@@ -9,21 +9,22 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // ヘッダー
 import Header from './components/Header';
-// 資格
-import Certifications from './pages/Certifications';
-// 自己紹介
-import Introduce from './pages/Introduce';
-// スキル
-import Skill from './pages/Skill';
+// // 資格
+// import Certifications from './pages/Certifications';
+// // 自己紹介
+// import Introduce from './pages/Introduce';
+// // スキル
+// import Skill from './pages/Skill';
 
 // アニメーション用のRoutesコンポーネント
 import AnimatedRoutes from './components/AnimatedRoutes';
 
 // ページをカテゴリごとに分類する。それぞれオブジェクトとして管理する。
 const categories = [
-  {catTitle: '自己紹介', path: '/introduce', page: Introduce},
-  {catTitle: '資格', path: '/certifications', page: Certifications},
-  {catTitle: 'スキル', path: '/skill', page: Skill}
+  // 初期に表示するページ以外は遅延読み込みすることで、パフォーマンスを向上させる
+  {catTitle: '自己紹介', path: '/introduce', page: React.lazy(() => import('./pages/Introduce'))},
+  {catTitle: '資格', path: '/certifications', page: React.lazy(() => import('./pages/Certifications'))},
+  {catTitle: 'スキル', path: '/skill', page: React.lazy(() => import('./pages/Skill'))}
 ];
 
 

@@ -26,7 +26,15 @@ const CareerModal = () => {
       <Modal isOpen={isOpen} size={['xs', 'md', 'xl']} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader><Text borderBottom='1px solid green' display='inline-block' ><ruby>中村 拓実<rt>なかむら たくみ</rt></ruby>の経歴</Text></ModalHeader>
+          <ModalHeader>
+            <Text borderBottom='1px solid green' display='inline-block' >
+              {/* <ruby>中村 拓実<rt>なかむら たくみ</rt></ruby>の経歴 */}
+              <ruby>
+                中村<rp>(</rp><rt>なかむら</rt><rp>)</rp>
+                拓実<rp>(</rp><rt>たくみ</rt><rp>)</rp>
+              </ruby>の経歴
+            </Text>
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody fontSize={['sm', 'md', 'lg']}>
             <Box px='2' pb='5'>

@@ -19,7 +19,8 @@ const Certification = (props) => {
       <Heading fontSize={['2xl', '3xl']} pb={7}>{props.title}</Heading>
       <Text>取得年月:  {props.getDate}</Text>
       {/* スコアは任意 */}
-      {props.score ? <Text>スコア:  {props.score}</Text> : <></>}
+      {/* {props.score ? <Text>スコア:  {props.score}</Text> : <></>} */}
+      {props.score ? <Text>スコア:  {props.score}</Text> : null /* 何もない場合は null が使えるよ！ */}
     </Box>
   );
 }
@@ -46,10 +47,18 @@ const Certifications = () => {
         </TabList>
 
         <TabPanels>
-          {tabElements.map((tabElement) => {
+          {/* {tabElements.map((tabElement) => {
             return (
               <TabPanel>
                 <Certification title={tabElement.formalName} getDate={tabElement.getDate} score={tabElement.score} />
+              </TabPanel>
+            )
+          })} */}
+           
+           {/* 分割代入を使うほうがわかりやすいかも？ */tabElements.map(({formalName, getDate, score}) => {
+            return (
+              <TabPanel>
+                <Certification title={formalName} getDate={getDate} score={score} />
               </TabPanel>
             )
           })}
